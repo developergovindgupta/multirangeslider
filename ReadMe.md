@@ -1,7 +1,7 @@
 # MultiRangeSlider.js
 download 
  - [MultiRangeSlider.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.js)
- - [MultiRangeSlider.min.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.js)
+ - [MultiRangeSlider.min.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.min.js)
  - [MultiRangeSlider.css](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/css/MultiRangeSlider.css)
 
 source code and demo
