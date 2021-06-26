@@ -1,12 +1,12 @@
 # MultiRangeSlider.js
 download 
- - MultiRangeSlider.js
- - MultiRangeSlider.min.js
- - MultiRangeSlider.css
+ - [MultiRangeSlider.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.js)
+ - [MultiRangeSlider.min.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.js)
+ - {MultiRangeSlider.css}(https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/css/MultiRangeSlider.css)
 
 source code and demo
- - download source code 
- - view demo
+ - [download source code](https://github.com/developergovindgupta/multirangeslider) 
+ - [view demo](https://20cpl.csb.app/)
 
 
 ## Description
@@ -106,6 +106,8 @@ This control dispatches following events that can be handled by registering even
 | shift + wheel | scroll left thumb and increment/decrement selected min value and trigger [input, change, slidestart, slide, slideend ] events |
 |ctrl + wheel| scroll right thumb and increment/decrement selected max value and trigger [input, change, slidestart, slide, slideend ] events|
 |shift + ctrl + wheel| scroll left and right both thumbs and increment/decrement selected min and max values and trigger [input, change, slidestart, slide, slideend ] events|
+
+
 when both slider moves together then eventListener argument's slider property return array of both sliders. [slider.bar.thumb_left, slider.bar.thumb_right]
 
 
