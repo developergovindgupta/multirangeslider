@@ -17,6 +17,9 @@
 .multi-range-slider-bar {
 	display: flex;
 }
+.multi-range-slider-bar * {
+	transition: all 100ms;
+}
 .multi-range-slider-bar-left {
 	width: 25%;
 	background-color: gray;

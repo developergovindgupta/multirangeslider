@@ -7,6 +7,7 @@ download
 source code and demo
  - [download source code](https://github.com/developergovindgupta/multirangeslider) 
  - [view demo](https://20cpl.csb.app/)
+ - [view demo-2](https://codepen.io/developergovindgupta/pen/qBmWrbK)
 
 
 ## Description

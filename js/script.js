@@ -5,11 +5,11 @@
 
 	const multiRangeSlider1 = new MultiRangeSlider(options);
 
-	const multiRangeSlider2 = new MultiRangeSlider({ min: 0, max: 2, step: 0.1, showRuler: false, showValue: false, showLabel: false, preventWheel: true });
+	const multiRangeSlider2 = new MultiRangeSlider();
 	document.body.appendChild(multiRangeSlider2);
 
-	multiRangeSlider2.style.width = '500px';
-	multiRangeSlider2.style.marginLeft = '200px';
+	multiRangeSlider2.style.maxWidth = '500px';
+	multiRangeSlider2.style.margin = 'auto';
 	multiRangeSlider2.addEventListener('slidestart', function (e) {
 		console.log(e);
 	});
