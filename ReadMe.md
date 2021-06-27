@@ -1,4 +1,9 @@
 # MultiRangeSlider.js
+
+
+![MultiRangeSlider.png](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/MultiRangeSlider.png)
+
+
 download 
  - [MultiRangeSlider.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.js)
  - [MultiRangeSlider.min.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.min.js)
