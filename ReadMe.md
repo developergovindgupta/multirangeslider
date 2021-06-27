@@ -34,6 +34,8 @@ This slider control can be handled by options that is passed to constructor func
 
     let options = {
 	    container : null, // target container element where it append
+		id : '', //set id attribute if passed value else unset
+		baseClassName : '', // prefix of class names of all elements of range slider default "multi-range-slider" set if you want to change theme style.
 	    min : 0, // slider min value default is 0
 	    max : 100, // slider max value default is 100
 	    step : 5, // slider step value default is ((max - min) / 20)=5
@@ -43,7 +45,6 @@ This slider control can be handled by options that is passed to constructor func
 	    showValue : true, // is selected min and max value label shows or not default true
 	    showLabel : true, // is slider min and max value shows or not default true
 	    preventWheel : false, // is slider move with mouse wheel default is false
-	    baseClassName : '', // prefix of class names of all elements of range slider default "multi-range-slider-" set if you want to change theme style.
 	    oninit : null, // eventHandlerFunction trigger when control is created by constructor.
 	    onbarclick : null, // eventHandlerFunction trigger when control's bar clicked.
 	    oninput : null, // eventHandlerFunction trigger when control's value change by user.
@@ -66,6 +67,10 @@ This slider control can be handled by setting properties and adding event listen
 |step|(Numeric) get/set slider step value, controls ruler points and bar click value increment/decrement |
 |value_min|(Numeric) get/set slider selected min value|
 |value_max|(Numeric) get/set slider selected max value|
+|minValue|(Numeric) get/set slider selected min value|
+|maxValue|(Numeric) get/set slider selected max value|
+|value1|(Numeric) get/set slider selected min value|
+|value2|(Numeric) get/set slider selected max value|
 |showRuler|(boolean) get/set slider ruler is visible or not|
 |showValue|(boolean) get/set slider thumb selected min and max value is visible or not|
 |showLabel|(boolean) get/set slider min and max value label is display or not|
@@ -97,6 +102,10 @@ This control dispatches following events that can be handled by registering even
 |step| slider step value|
 |value_min| slider selected min value|
 |value_max| slider selected max value|
+|minValue| slider selected min value|
+|maxValue| slider selected max value|
+|value1| slider selected min value|
+|value2| slider selected max value|
 |slider| slider.bar.thumb_left/slider.bar.thumb_right|
 |target| multiRangeSliderObject|
 

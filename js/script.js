@@ -1,6 +1,7 @@
 (function () {
 	const options = {
 		container: document.querySelector('.MultiRangeSlider'),
+		id: 'mrs1',
 	};
 
 	const multiRangeSlider1 = new MultiRangeSlider(options);
@@ -13,6 +14,7 @@
 	multiRangeSlider2.addEventListener('slidestart', function (e) {
 		console.log(e);
 	});
+	multiRangeSlider2.id = 'multiRangeSlider2';
 	// multiRangeSlider1.step = 1;
 	// multiRangeSlider1.value_min = -40;
 	// multiRangeSlider1.value_max = 80;

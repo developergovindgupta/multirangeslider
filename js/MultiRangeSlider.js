@@ -32,10 +32,10 @@ const MultiRangeSlider = function (options) {
 	let _preventChange = false;
 	let _preventWheel = false;
 	let _wheelTimer = null;
-	const baseClassName = options.baseClassName || 'multi-range-slider-';
+	const baseClassName = (options.baseClassName || 'multi-range-slider') + '-';
 	const createLayout = function () {
 		const _multiRangeSlider = document.createElement('div');
-		_multiRangeSlider.className = baseClassName + 'container';
+		_multiRangeSlider.className = baseClassName.substring(0, baseClassName.length - 1);
 		_multiRangeSlider.addEventListener('wheel', onWheel);
 
 		let bar = document.createElement('div');
@@ -307,6 +307,10 @@ const MultiRangeSlider = function (options) {
 		evt.step = _step;
 		evt.value_min = _value_min;
 		evt.value_max = _value_max;
+		evt.minValue = _value_min;
+		evt.maxValue = _value_max;
+		evt.value1 = _value_min;
+		evt.value2 = _value_max;
 		e && e.slider && (evt.slider = e.slider);
 		_multiRangeSlider.dispatchEvent(evt);
 	};
@@ -329,6 +333,7 @@ const MultiRangeSlider = function (options) {
 
 	const _multiRangeSlider = createLayout();
 	options.container && options.container.appendChild(_multiRangeSlider);
+	options.id && (_multiRangeSlider.id = options.id);
 
 	Object.defineProperty(_multiRangeSlider, 'min', {
 		get() {
@@ -465,6 +470,38 @@ const MultiRangeSlider = function (options) {
 		},
 		set(value) {
 			_preventWheel = value;
+		},
+	});
+	Object.defineProperty(_multiRangeSlider, 'value1', {
+		get() {
+			return _value_min;
+		},
+		set(value) {
+			_multiRangeSlider.value_min = value;
+		},
+	});
+	Object.defineProperty(_multiRangeSlider, 'value2', {
+		get() {
+			return _value_max;
+		},
+		set(value) {
+			_multiRangeSlider.value_max = value;
+		},
+	});
+	Object.defineProperty(_multiRangeSlider, 'minValue', {
+		get() {
+			return _value_min;
+		},
+		set(value) {
+			_multiRangeSlider.value_min = value;
+		},
+	});
+	Object.defineProperty(_multiRangeSlider, 'maxValue', {
+		get() {
+			return _value_max;
+		},
+		set(value) {
+			_multiRangeSlider.value_max = value;
 		},
 	});
 
