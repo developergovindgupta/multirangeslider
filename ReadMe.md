@@ -3,6 +3,8 @@
 
 ![MultiRangeSlider.png](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/MultiRangeSlider.png)
 
+![MultiRangeSlider.png](./MultiRangeSlider2.png)
+
 
 download 
  - [MultiRangeSlider.js](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/js/MultiRangeSlider.js)
@@ -12,7 +14,8 @@ download
 source code and demo
  - [download source code](https://github.com/developergovindgupta/multirangeslider) 
  - [view demo](https://20cpl.csb.app/)
- - [view demo-2](https://codepen.io/developergovindgupta/pen/qBmWrbK)
+ - [view demo-style-1](https://codepen.io/developergovindgupta/pen/qBmWrbK)
+ - [view demo-style-2](https://codepen.io/developergovindgupta/pen/oNWNzVm)
 
 
 ## Description
