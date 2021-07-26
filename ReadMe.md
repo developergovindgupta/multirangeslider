@@ -1,7 +1,7 @@
 # MultiRangeSlider.js
 
 
-![MultiRangeSlider.png](https://raw.githubusercontent.com/developergovindgupta/multirangeslider/main/MultiRangeSlider.png)
+![MultiRangeSlider.png](./MultiRangeSlider.png)
 
 ![MultiRangeSlider.png](./MultiRangeSlider2.png)
 
@@ -57,8 +57,8 @@ This slider control can be handled by options that is passed to constructor func
 	    onbarclick : null, // eventHandlerFunction trigger when control's bar clicked.
 	    oninput : null, // eventHandlerFunction trigger when control's value change by user.
 	    onchange : null, // eventHandlerFunction trigger when control's value change by user or JavaScript. 
-	    onslidestart : null // eventHandlerFunction trigger when thumb is start sliding by user.
-	    onslide : null // eventHandlerFunction triggers continuously till the thumb is sliding by user. also trigger when user click on bar.
+	    onslidestart : null, // eventHandlerFunction trigger when thumb is start sliding by user.
+	    onslide : null, // eventHandlerFunction triggers continuously till the thumb is sliding by user. also trigger when user click on bar.
 	    onslideend : null // eventHandlerFunction trigger when thumb is stop sliding by user.
     }
 
@@ -129,3 +129,141 @@ This control dispatches following events that can be handled by registering even
 when both slider moves together then eventListener argument's slider property return array of both sliders. [slider.bar.thumb_left, slider.bar.thumb_right]
 
 
+# Example Code : 
+
+
+## Method - 1
+
+### HTML 
+
+	<link rel="stylesheet" href="./MultiRangeSlider/MultiRangeSlider2.css" />
+	<script src="./MultiRangeSlider/MultiRangeSlider.js"></script>
+
+
+
+	<div class="container">
+		<div class="multi-range-slider-container" style="width: 500px; margin: auto"></div>
+		<br />
+		<br />
+		<div class="multi-range-slider-result" style="text-align: center"></div>
+	</div>
+
+### JS
+
+	let onInitMultiRangeSlider = function (e) {
+		document.querySelector('.multi-range-slider-result').innerHTML = 
+		'minValue = ' + e.minValue + '<br/>maxValue = ' + e.maxValue;
+	};
+
+	let onInputMultiRangeSlider = function (e) {
+		document.querySelector('.multi-range-slider-result').innerHTML = 
+		'minValue = ' + e.minValue + '<br/>maxValue = ' + e.maxValue;
+	};
+
+	let options = {
+		container: document.querySelector('.multi-range-slider-container'), 
+		id: 'MultiRangeSlider1', 
+		baseClassName: '', 
+		min: 0, 
+		max: 100, 
+		step: 5, 
+		value_min: 25, 
+		value_max: 75, 
+		showRuler: true, 
+		showValue: true, 
+		showLabel: true, 
+		preventWheel: false, 
+		oninit: onInitMultiRangeSlider, 
+		onbarclick: null, 
+		oninput: onInputMultiRangeSlider, 
+		onchange: null, 
+		onslidestart: null, 
+		onslide: null, 
+		onslideend: null, 
+	};
+	const multiRangeSlider1 = new MultiRangeSlider(options);
+	
+![MultiRangeSlider.png](./MultiRangeSlider2.png)
+
+## Method - 2
+
+### HTML 
+
+	<link rel="stylesheet" href="./MultiRangeSlider/MultiRangeSlider.css" />
+	
+
+	<div class="container">
+		<div class="multi-range-slider-container" style="width: 500px; margin: auto"></div>
+		<br />
+		<br />
+		<div class="multi-range-slider-result" style="text-align: center"></div>
+	</div>
+
+
+### JS
+
+    import MultiRangeSlider from './MultiRangeSlider.min.js';
+
+    const multiRangeSlider = new MultiRangeSlider();
+    document.querySelector('.container .multi-range-slider-container').appendChild(multiRangeSlider);
+    
+    // multiRangeSlider.min = 0;
+    // multiRangeSlider.max = 100;
+    // multiRangeSlider.minValue = 10;
+    // multiRangeSlider.maxValue = 90;
+    // multiRangeSlider.step = 5;
+    // multiRangeSlider.showRuler = true;
+    // multiRangeSlider.showValue = true;
+    // multiRangeSlider.showLabel = true;
+    // multiRangeSlider.preventWheel = false;
+
+    multiRangeSlider.oninput = (e) => {
+        document.querySelector('.container .multi-range-slider-result').innerHTML = 
+        'minValue = ' + e.minValue + '<br/>maxValue = ' + e.maxValue;
+    };
+
+    document.querySelector('.container .multi-range-slider-result').innerHTML = 
+    'minValue = ' + multiRangeSlider.minValue + '<br/>maxValue = ' + multiRangeSlider.maxValue;
+	
+![MultiRangeSlider.png](./MultiRangeSlider2.png)
+
+
+
+## baseClassName
+
+### HTML
+
+	<link rel="stylesheet" href="./MultiRangeSlider/MultiRangeSliderBlack.css" />
+	
+
+	<div class="container">
+		<div class="multi-range-slider-container" style="width: 500px; margin: auto"></div>
+		<br />
+		<br />
+		<div class="multi-range-slider-result" style="text-align: center"></div>
+	</div>
+	
+
+### JS
+
+    import MultiRangeSlider from './MultiRangeSlider.min.js';
+
+    const multiRangeSliderBlack = new MultiRangeSlider({ baseClassName: 'multi-range-slider-black' });
+    document.querySelector('.container .multi-range-slider-container')
+    .appendChild(multiRangeSliderBlack);
+    
+    
+    multiRangeSliderBlack.oninput = (e) => {
+        document.querySelector('.container .multi-range-slider-result').innerHTML = 
+        'minValue = ' + e.minValue + '<br/>maxValue = ' + e.maxValue;
+    };
+
+    document.querySelector('.container .multi-range-slider-result').innerHTML = 
+    'minValue = ' + multiRangeSliderBlack.minValue +
+     '<br/>maxValue = ' + multiRangeSliderBlack.maxValue;
+	
+
+![MultiRangeSlider.png](./MultiRangeSlider.png)
+
+
+# License : Free to Use

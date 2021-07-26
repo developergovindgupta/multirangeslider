@@ -3,8 +3,38 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-html,
-body {
+html {
 	width: 100vw;
 	height: 100vh;
+}
+
+body {
+	text-align: center;
+	padding: 50px;
+}
+.method-section {
+	border: solid 1px;
+	border-radius: 20px;
+	margin: 50px auto;
+	padding: 50px;
+	display: inline-block;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		width: 100vw;
+		padding: 5px;
+	}
+	.method-section {
+		border: solid 1px;
+		border-radius: 5px;
+		margin: 20px 0px;
+		padding: 5px;
+		display: inline-block;
+		overflow: hidden;
+		width: calc(100vw - 10px);
+	}
+	.multi-range-slider-container {
+		max-width: calc(100% - 20px) !important;
+	}
 }

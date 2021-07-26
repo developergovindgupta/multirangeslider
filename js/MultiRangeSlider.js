@@ -1,3 +1,4 @@
+'use strict';
 /*
 	╔════════════════════════════════════════════════════════════════════════════════════════╗
 	║                         MULTI RANGE SLIDER                                             ║
@@ -525,3 +526,4 @@ const MultiRangeSlider = function (options) {
 	dispatchEvents('init');
 	return _multiRangeSlider;
 };
+//export default MultiRangeSlider;
